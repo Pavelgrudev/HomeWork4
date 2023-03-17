@@ -106,23 +106,18 @@ public class Main {
     public static void task6() {
         int wagonСapacity = 102;
         if (wagonСapacity < 102) {
-            System.out.println("вагон не забит.");
-        } else {
-            System.out.println("Вагон забит");
-        }
+            System.out.println("вагон не забит.");} else {
+            System.out.println("Вагон забит");}
         int seatsForASittingTrip = 60;
         if (seatsForASittingTrip < 60) {
-            System.out.println("В этом вагоне ещё есть место для поездки сидя");
-        } else {
-            System.out.println("В этом вагоне места для поездки сидя, закончились.");
-        }
+            System.out.println("В этом вагоне ещё есть место для поездки сидя");} else {
+            System.out.println("В этом вагоне места для поездки сидя, закончились.");}
         int standingPlaces = wagonСapacity - seatsForASittingTrip;
         System.out.println(wagonСapacity - seatsForASittingTrip);
         if (standingPlaces < 42) {
             System.out.println("В вагоне есть места для поездки стоя");} else {
             System.out.println("В этом вагоне, мест для поездки стоя больше нет");}
     }
-
     public static void task7() {
         int one=5;
         int two=10;
