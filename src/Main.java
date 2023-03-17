@@ -16,49 +16,38 @@ public class Main {
 
     }
 
-    public static void task1() {
-
+    public static void task1(){
         int age = 19;
         if (age >= 18) {
-            System.out.println("Если возраст человека равен или больше age то он достиг совершеннолетия");
-        }
-        int age2 = 17;
-        if (age2 < 18) {
-            System.out.println("«Если возраст человека меньше age2 то он не достиг совершеннолетия, нужно немного подождать».");
+            System.out.println("он достиг совершеннолетия");}
+        if (age < 18) {
+            System.out.println("он не достиг совершеннолетия, нужно немного подождать».");
         }
     }
 
     public static void task2() {
         int temperature = 4;
         if (temperature < 5) {
-            System.out.println("На улице temperature градуса,нужно надеть шапку");
-        }
-        int temperature2 = 6;
-        if (temperature2 > 5) {
-            System.out.println("На улице  temperature2 градусов,можно идти без шапки».");
-        }
+            System.out.println("нужно надеть шапку");}
+        if (temperature> 5) {
+            System.out.println("можно идти без шапки».");}
     }
-
     public static void task3() {
         int speed = 59;
         if (speed < 60) {
-            System.out.println("Если скорость меньше speed то можно ездить спокойно».");
-        }
-        int speed2 = 61;
-        if (speed2 > 60) {
-            System.out.println("Если скорость больше speed2 то придется заплатить штраф");
-        }
+            System.out.println("Если скорость меньше speed то можно ездить спокойно».");}
+        if (speed> 60) {
+            System.out.println("Если скорость больше speed2 то придется заплатить штраф");}
     }
 
     public static void task4() {
         int age = 4;
         if (age >= 2 && age <= 6) {
-            System.out.println("Если возраст человека равен age то ему нужно ходить в детский сад");
-        } else {
+            System.out.println("Если возраст человека равен age то ему нужно ходить в детский сад");} else {
             System.out.println("Если возраст меньше или больше age то он не должен ходить в детский сад");
         }
         int age2 = 12;
-        if (age2 >= 7 && age2 <= 18) {
+        if (age2 >= 7 && age2 < 18) {
             System.out.println("Если возраст человека равен  age2 то ему нужно ходить в школу");
         } else {
             System.out.println("Если возраст человека больше,или меньше  age2 , то ему не нужно ходить в школу");
@@ -105,18 +94,22 @@ public class Main {
 
     public static void task6() {
         int wagonСapacity = 102;
-        if (wagonСapacity < 102) {
-            System.out.println("вагон не забит.");} else {
-            System.out.println("Вагон забит");}
         int seatsForASittingTrip = 60;
-        if (seatsForASittingTrip < 60) {
-            System.out.println("В этом вагоне ещё есть место для поездки сидя");} else {
-            System.out.println("В этом вагоне места для поездки сидя, закончились.");}
         int standingPlaces = wagonСapacity - seatsForASittingTrip;
-        System.out.println(wagonСapacity - seatsForASittingTrip);
-        if (standingPlaces < 42) {
-            System.out.println("В вагоне есть места для поездки стоя");} else {
-            System.out.println("В этом вагоне, мест для поездки стоя больше нет");}
+        int seatsUsed=55;
+        int standUsed=40;
+        int totalSeatsLeft = 102-(seatsUsed+standUsed);
+        if (seatsUsed<seatsForASittingTrip ) {
+            System.out.println("В этом вагоне мест = "    +(seatsForASittingTrip-seatsUsed)+  " шт. для поесдки сидя");}
+        if(seatsForASittingTrip == seatsUsed){
+            System.out.println( " В этом вагоне места для поездки сидя, закончились.");}
+        if (standingPlaces > standUsed) {
+            System.out.println("В этом вагоне мест = "    + (standingPlaces - standUsed)+  " шт. для поездки стоя");} else {
+            System.out.println("В этом вагоне мест для поездки стоя больше нет");}
+        if(totalSeatsLeft>0){
+            System.out.println( "в этом вагоне мест = " +totalSeatsLeft+ " из них " +(seatsForASittingTrip-seatsUsed)+
+                    " мест для положения сидя и "  + (standingPlaces - standUsed)+ "  для положения стоя");}else{
+            System.out.println("ИЗВИНИТЕ,ВАГОН ПОЛНЫЙ,МЕСТ НЕТ!"); }
     }
     public static void task7() {
         int one=5;
